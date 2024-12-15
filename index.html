@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="./style/app.css">
+    <script src="./js/jspdf.js"></script>
+    <script src="./js/html2canvas.js"></script>
+</head>
+<body>
+    <div class="screen" id="content">
+        <div class="layout basis-[35%]">
+            <div class="card p-0 flex-grow-0 gap-0">
+                <div class="flex flex-col">
+                    <div class="flex flex-col justify-center items-start sm:items-center p-3">
+                        <div class="overflow-clip size-52 rounded-full border-2 border-gray-700 flex flex-col justify-center items-center">
+                            <img src="./img/profile.jpg" class="object-cover translate-y-3 scale-105">
+                        </div>
+                    </div>
+                    <div class="flex flex-col p-3">
+                        <span class="myfont-medium text-lg">
+                            Muh Ulil Alkhaq
+                        </span>
+                        <div class="flex flex-row gap-1">
+                            <span>Programmer</span>
+                            <span>🔹</span>
+                            <span>Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col p-3">
+                    <div class="box">
+                        <p>
+                            Developer with 4+ years of experience in building Interactive Multimedia and Backend Apps.
+                        </p>
+                        <div>
+                            <span>Programs Skill:</span>
+                            <div class="flex flex-row flex-wrap gap-1">
+                                <span class="tag">C#</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span>Framework Skill:</span>
+                            <div class="flex flex-row flex-wrap gap-1">
+                                <span class="tag">Unity3D</span>
+                                <span class="tag">.Net</span>
+                                <span class="tag">Laravel</span>
+                                <span class="tag">Codeigniter</span>
+                                <span class="tag">Tailwindcss</span>
+                                <span class="tag">Flutter</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span>Other Skill:</span>
+                            <div class="flex flex-row flex-wrap gap-1">
+                                <span class="tag">AR</span>
+                                <span class="tag">VR</span>
+                                <span class="tag">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="save-pdf" hidden>Save To PDF</button>
+                </div>
+            </div>
+            <div class="card flex-grow-0">
+                <span id="title">
+                    <img src="./img/icon/pin.svg">
+                    About Me
+                </span>
+                <div class="box">
+                    <p>
+                        I am a versatile developer with expertise in both backend and frontend development, skilled in
+                        Python, C#, PHP, and JavaScript. I have extensive experience building web applications using
+                        Laravel and have also worked on game development projects. My focus is on creating efficient,
+                        scalable solutions using modern technologies to meet various business needs
+                    </p>
+                    <span class="h-line"></span>
+                    <div class="flex flex-col">
+                        <a 
+                            href="https://wa.me/6282137907657"
+                            class="contact"
+                            target="_blank"
+                        >
+                            <img id="icon" src="./img/icon/phone.svg">
+                            <span id="value">+62 821-3790-7657</span>
+                        </a>
+                        <a 
+                            href="mailto:ulilalkhaq4@gmail.com"
+                            class="contact"
+                            target="_blank"
+                        >
+                            <img id="icon" src="./img/icon/mail.svg">
+                            <span id="value">ulilalkhaq4@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span id="title">
+                    <img src="./img/icon/pin.svg">
+                    Information
+                </span>
+                <div class="information">
+                    <div>
+                        <span id="label">Location</span>
+                        <span id="value">Gubug, Grobogan, Central Java</span>
+                    </div>
+                    <span class="h-line"></span>
+                    <div>
+                        <span id="label">Experience</span>
+                        <span id="value">>4 Years</span>
+                    </div>
+                    <span class="h-line"></span>
+                    <div>
+                        <span id="label">Available</span>
+                        <span id="value">Ready for Work</span>
+                    </div>
+                    <span class="h-line"></span>
+                    <div>
+                        <span id="label">Relocation</span>
+                        <span id="value">Yes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout basis-[65%]">
+            <div class="card">
+                <span id="title">
+                    <img src="./img/icon/pin.svg">
+                    Experience
+                </span>
+                <div class="flex flex-col gap-2">
+                    <div class="item">
+                        <div id="icon">
+                            <img src="./img/experience/coretag.png">
+                        </div>
+                        <div id="content">
+                            <div id="profile">
+                                <span id="title">AR/VR Developer</span>
+                                <div id="detail">
+                                    <div id="item">
+                                        <img src="./img/icon/work.svg">
+                                        <span>Coretag Team</span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/location.svg">
+                                        <span>Semarang</span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/calender.svg">
+                                        <span>2023-2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="description">
+                                <p>
+                                    Description
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div id="icon">
+                            <img src="./img/experience/coretag.png">
+                        </div>
+                        <div id="content">
+                            <div id="profile">
+                                <span id="title">Python Programmer</span>
+                                <div id="detail">
+                                    <div id="item">
+                                        <img src="./img/icon/work.svg">
+                                        <span>Coretag Team</span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/location.svg">
+                                        <span>Semarang</span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/calender.svg">
+                                        <span>2022-2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="description">
+                                <p>
+                                    Description
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div id="icon">
+                            <img src="./img/experience/grobogan.png">
+                        </div>
+                        <div id="content">
+                            <div id="profile">
+                                <span id="title">Mobile Developer Intern</span>
+                                <div id="detail">
+                                    <div id="item">
+                                        <img src="./img/icon/work.svg">
+                                        <span>Gubug District Office </span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/location.svg">
+                                        <span>Grobogan</span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/calender.svg">
+                                        <span>2021-2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="description">
+                                <p>
+                                    I have interned at the Gubug Subdistrict Office, assisting with IT-related tasks and
+                                    developing a mobile application for the office's needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card flex-grow-0">
+                <span id="title">
+                    <img src="./img/icon/pin.svg">
+                    Education
+                </span>
+                <div class="flex flex-col gap-2">
+                    <div class="item">
+                        <div id="icon">
+                            <img src="./img/education/usm.png" alt="Icon">
+                        </div>
+                        <div id="content">
+                            <div id="profile">
+                                <span id="title">Bachelor of Computer Science</span>
+                                <div id="detail">
+                                    <div id="item">
+                                        <img src="./img/icon/school.svg">
+                                        <span>Universitas Semarang</span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/location.svg">
+                                        <span>Semarang</span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/calender.svg">
+                                        <span>2020-2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="description">
+                                <p>
+                                    Semarang University is a private university in Semarang City, Central Java, Indonesia.
+                                    This college initially had two campus locations, namely on Jl. Atmodirono 11 and on Jl. Soekarno-Hatta.
+                                    Then since 2010, all Semarang University (USM) student activities have been centered on the Jl. Soekarno-Hatta.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div id="icon">
+                            <img src="./img/education/yasiha.png" alt="Icon">
+                        </div>
+                        <div id="content">
+                            <div id="profile">
+                                <span id="title">Architecture</span>
+                                <div id="detail">
+                                    <div id="item">
+                                        <img src="./img/icon/school.svg">
+                                        <span>SMK Yasiha</span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/location.svg">
+                                        <span>Gubug</span>
+                                    </div>
+                                    <div id="item">
+                                        <img src="./img/icon/calender.svg">
+                                        <span>2016-2019</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="description">
+                                <p>
+                                    Yasiha School began its work in providing vocational education in the 1980s (at that time it was called the Secondary Technical School)
+                                    with the spirit of producing skilled resources who uphold Islamic spiritual values, to jointly help build the nation and civilization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('save-pdf').addEventListener('click', async () => {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+
+            // Tambahkan teks secara manual
+            pdf.text('Ini adalah PDF yang dihasilkan!', 10, 10);
+
+            // Tambahkan elemen HTML
+            const element = document.getElementById('content');
+            pdf.html(element, {
+                callback: function (doc) {
+                    doc.save('halaman.pdf');
+                },
+                x: 10,
+                y: 10
+            });
+        });
+    </script>
+</body>
+</html>

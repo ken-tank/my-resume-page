@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'myfont';
+    src: url('../font/Inter.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    html {
+        @apply size-full myfont-light text-sm tracking-wider leading-relaxed;
+    }
+    body {
+        @apply size-full flex flex-col flex-grow items-center bg-gray-100 text-gray-800;
+    }
+}
+
+@layer components{
+    .myfont-light {
+        font-family: "myfont", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    } 
+    .myfont-reguler {
+        font-family: "myfont", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    } 
+    .myfont-medium {
+        font-family: "myfont", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    } 
+    .myfont-bold {
+        font-family: "myfont", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    .myfont-black {
+        font-family: "myfont", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    .screen {
+        @apply flex flex-col gap-4 p-4 w-full max-w-screen-lg sm:flex-row;
+    }
+    .layout {
+        @apply flex flex-col gap-4 flex-grow;
+    }
+    .card {
+        @apply flex flex-col p-3 gap-3 bg-white rounded-lg flex-grow shadow-sm;
+    }
+    .card > #title {
+        @apply myfont-medium text-lg flex flex-row items-center gap-3;
+    }
+    .card > #title > img {
+        @apply w-4;
+    }
+    .box {
+        @apply flex flex-col px-3 py-4 gap-4 items-stretch bg-gray-100 rounded-lg;
+    }
+    .box > p {
+        @apply w-full;
+    }
+    .h-line {
+        @apply w-full h-0 border;
+    }
+    .contact {
+        @apply flex flex-row items-center gap-3 rounded-lg justify-center cursor-pointer px-2 py-2 duration-200 hover:bg-gray-200 hover:shadow-md hover:pl-3;
+    }
+    .contact > #icon {
+        @apply flex flex-row w-5;
+    }
+    .contact > #value {
+        @apply flex flex-row flex-grow;
+    }
+    .item {
+        @apply box flex-row duration-200 hover:bg-gray-200;
+    }
+    .item > #icon {
+        @apply w-16 flex flex-col flex-shrink-0 justify-start items-center;
+    }
+    .item > #content {
+        @apply flex flex-col gap-4;
+    }
+    .item > #content > #profile {
+        @apply flex flex-col;
+    }
+    .item > #content > #profile > #title {
+        @apply myfont-reguler;
+    }
+    .item > #content > #profile > #detail {
+        @apply flex flex-row gap-3 text-sm;
+    }
+    .item > #content > #profile > #detail > #item {
+        @apply flex flex-row items-center gap-1;
+    }
+    .item > #content > #profile > #detail > #item > img {
+        @apply w-5;
+    }
+    .tag {
+        @apply bg-gray-300 px-3 rounded-md;
+    }
+    .information {
+        @apply box gap-3;
+    }
+    .information > div {
+        @apply flex flex-row justify-between;
+    }
+    .information > div > #label {
+        @apply flex flex-col basis-24 flex-shrink-0;
+    }
+    .information > div > #value {
+        @apply flex flex-col text-end myfont-reguler flex-grow; 
+    }
+}
