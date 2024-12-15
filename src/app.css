@@ -94,7 +94,7 @@
         @apply myfont-reguler;
     }
     .item > #content > #profile > #detail {
-        @apply flex flex-row gap-3 text-sm;
+        @apply flex flex-row gap-x-3 gap-y-1 text-sm flex-wrap;
     }
     .item > #content > #profile > #detail > #item {
         @apply flex flex-row items-center gap-1;
