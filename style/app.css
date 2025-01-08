@@ -117,7 +117,7 @@
 }
 
 /*
-! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -589,6 +589,13 @@ body {
   color: rgb(31 41 55 / var(--tw-text-opacity, 1));
 }
 
+body > #content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .container {
   width: 100%;
 }
@@ -635,7 +642,6 @@ body {
   max-width: 1024px;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
 }
 
 @media (min-width: 640px) {
@@ -809,6 +815,7 @@ body {
 .item > #content > #profile > #detail > #item {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 0.25rem;
 }
@@ -1066,6 +1073,10 @@ body {
   gap: 0.5rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflow-clip {
   overflow: clip;
 }
@@ -1076,6 +1087,10 @@ body {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-none {
+  border-radius: 0px;
 }
 
 .border {
